@@ -1,0 +1,46 @@
+{
+    "VK_RZ_A1H": {
+        "inherits": ["RZ_A1XX"],
+        "extra_labels_add": ["RZA1H", "VKRZA1H", "RENESAS_EMAC"],
+        "components_add": ["FLASHIAP"],
+        "device_has_add": ["USBDEVICE", "EMAC", "QSPIx2", "FLASH", "LPTICKER", "SDHI"],
+        "release_versions": ["5"],
+        "device_name": "R7S72100",
+        "bootloader_supported": true,
+        "mbed_rom_start": "0x18020000",
+        "mbed_rom_size": "0x1FE0000",
+        "sectors": [[402784256,131072]],
+        "detect_code": ["C002"]
+    },
+    "VK_RZ_A1LU": {
+        "inherits": ["RZ_A1XX"],
+        "extra_labels_add": ["RZA1LU", "VKRZA1LU"],
+        "components_add": ["FLASHIAP"],
+        "device_has_add": ["USBDEVICE", "TRNG", "FLASH", "LPTICKER", "SDHI"],
+        "device_has_remove": ["ETHERNET"],
+        "release_versions": ["5"],
+        "device_name": "R7S72103",
+        "bootloader_supported": true,
+        "mbed_rom_start": "0x18000000",
+        "mbed_rom_size": "0x1000000",
+        "sectors": [[402653184,4096]],
+        "overrides": {
+            "network-default-interface-type": null
+        },
+        "detect_code": ["C003"]
+    },
+	"VK_RZ_A1R3": {
+        "inherits": ["RZ_A1XX"],
+        "supported_form_factors": ["ARDUINO"],
+        "extra_labels_add": ["RZA1LU", "VKRZA1R3", "RENESAS_EMAC"],
+        "components_add": [ "FLASHIAP"],
+        "device_has_add": [ "USBDEVICE", "EMAC", "FLASH", "LPTICKER", "SDHI"],
+        "release_versions": ["5"],
+        "device_name": "R7S72103",
+        "bootloader_supported": true,
+        "mbed_rom_start": "0x18000000",
+        "mbed_rom_size": "0x1000000",
+        "sectors": [[402653184,4096]],
+        "detect_code": ["C004"]
+    }
+}
