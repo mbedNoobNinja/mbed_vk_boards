@@ -36,12 +36,24 @@ VK `Custom Targets` come as library. It can easily be installed with **mbed CLI*
 
 Go to the project's DIR **>_** `cd /D <Project path>`
 
-- **CLI 1 >_** `mbed compile --custom-targets mbed_vk_boards -t ARM,GCC_ARM -m VK_RZ_A1H,VK_RZ_A1LU,VK_RZ_A1R3`
-- **CLI 2 >_** `mbed-tools compile --custom-targets-json mbed-vk-boards\custom_targets.json -t ARM,GCC_ARM -m VK_RZ_A1H,VK_RZ_A1LU,VK_RZ_A1R3`
+- **CLI 1 >_** `mbed compile --custom-targets mbed-vk-boards -t <toolchain> -m <VK board>`[^1][^2]
+- **CLI 2 >_** `mbed-tools compile --custom-targets-json mbed-vk-boards\custom_targets.json -t <toolchain> -m <VK board>`[^1][^2]
 
 ## Export
 
 Go to the project's DIR **>_** `cd /D <Project path>`
 
-- **CLI 1 >_** `mbed export --custom-targets mbed_vk_boards -i e2studio -m VK_RZ_A1H,VK_RZ_A1LU,VK_RZ_A1R3`
+- **CLI 1 >_** `mbed export --custom-targets mbed-vk-boards -i e2studio -m <VK board>`[^2]
 - **CLI 2 >_** `N/A`
+
+## Demo
+
+Any `mbed example program` available for a given `<VK board>` is (& will be) uploaded in `demos` folder. If no `<Example name>` is specified, **`Demo`** name will be extraced by deffault. The CLI tool can work with one example program at a time, so you have to specify what demo for which board to be extracted.
+
+[Full](https://vekatech.com/products2.php?id=2) Demo descriptions and more info about Bords manufactured by Vekatech.Ltd can be found on their website.
+
+Go to the project's DIR **>_** `cd /D <Project path>`
+- Extract **>_** `mbed-vk-boards\demos\extract.py <VK board> [<Example name>]`[^2]
+
+[^1]: `<toolchain>` can be one of these options [ **`ARM`** / **`GCC_ARM`** ]
+[^2]: `<VK board>` can be one of these options [ **`VK_RZ_A1H`** / **`VK_RZ_A1LU`** / **`VK_RZ_A1R3`** ]
