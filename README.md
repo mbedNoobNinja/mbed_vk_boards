@@ -2,7 +2,7 @@
 
 Mbed OS support for VK mbed boards
 
-:warning: (since v6.0 VK Boards were removed from the official releases, so their maintenance is done through **`custom-targets.json`** )
+:warning: (since mbed v6.0, VK Boards were removed from the official releases, so their maintenance is done through **`custom-targets.json`** )
 
 ## Install
 
@@ -15,7 +15,7 @@ VK `Custom Targets` come as library. It can easily be installed with **mbed CLI*
   - **>_** `cd <Project name>\mbed-os`
   - **>_** `mbed update <mbed-os-x.x.x>`
   - **>_** `cd ..`
-- Get Custom Targets lib **>_** `mbed add https://github.com/mbedNoobNinja/mbed-vk-boards`
+- Get Custom Targets lib **>_** `mbed add https://github.com/Vekatech/mbed-vk-boards`
 - Patch Mbed OS **>_** `mbed-vk-boards\patch\patch.py`
 
 ![Package](https://badgen.net/badge/CLI-2/mbed-tools/green)
@@ -24,8 +24,8 @@ VK `Custom Targets` come as library. It can easily be installed with **mbed CLI*
 - Update to supported Mbed OS version: (**`mbed-os-6.12.0`**)
   - **>_** `cd <Project name>`
   - **>_** `git -C mbed-os checkout <mbed-os-x.x.x>`
-- Get Custom Targets lib **>_** `mbed-tools import https://github.com/mbedNoobNinja/mbed-vk-boards`
-  - Create lib file **>_** `echo https://github.com/mbedNoobNinja/mbed-vk-boards> mbed-vk-boards.lib`
+- Get Custom Targets lib **>_** `mbed-tools import https://github.com/Vekatech/mbed-vk-boards`
+  - Create lib file **>_** `echo https://github.com/Vekatech/mbed-vk-boards> mbed-vk-boards.lib`
 - Patch Mbed OS **>_** `mbed-vk-boards\patch\patch.py`
 - Modify the CMakeLists.txt file:
   - Open project's ROOT **`CMakeLists.txt`**
